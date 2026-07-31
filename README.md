@@ -158,11 +158,3 @@ semantically similar but lexically different phrases separate better.
 
 ---
 
-## Possible extensions for a stronger submission
-
-- Add a small labeled validation set and report classifier accuracy/F1 in
-  the README (turns "Foundations of AI" into a measured result, not just a
-  built pipeline).
-- Add a `--export pdf` flag to also generate a PDF version of the report.
-- Add sentiment trend tracking across a user's session history (with
-  explicit opt-in, respecting the privacy note in `ethics_checker.py`).
