@@ -23,19 +23,6 @@ how you'd swap this for a real catalog in production.
 
 ---
 
-## How each course module maps to the code
-
-| Module | Where it lives | What it demonstrates |
-|---|---|---|
-| **Foundations of AI** | `mood_detector.py` | TF-IDF + Logistic Regression text classifier trained on labeled mood examples, with confidence scoring |
-| **Applied AI & Prompts** | `prompt_engine.py` | A deliberately engineered prompt (role, context, constraints, output format) sent to an LLM, with a template fallback |
-| **Ethics & Emerging Tech** | `ethics_checker.py` | Automated diversity/bias check on both the recommendation set and the underlying catalog, plus a transparency/privacy disclosure |
-| **AI Problem Solving & Innovation** | `music_matcher.py` | Weighted, explainable distance-scoring algorithm instead of a black-box recommender |
-| **AI for Research & Smart Decision Making** | `decision_engine.py` | A weighted decision matrix that turns mood + context into a target profile, with a printed reasoning trace |
-| **Exploring Agentic AI** | `agent.py` | Multi-step autonomous pipeline (perceive → decide → act → explain → self-check) with a decision made under uncertainty (low-confidence blending) |
-| **AI and Real-World Deployment** | `main.py`, `report_generator.py`, this README | Packaged as a real installable CLI, produces auditable session artifacts, documents a production migration path |
-
----
 
 ## Setup
 
