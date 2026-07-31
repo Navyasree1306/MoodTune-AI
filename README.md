@@ -1,7 +1,5 @@
 # MoodTune AI — Agentic Mood-Based Music Recommender
 
-Capstone project for **Infosys Springboard AI EMPOW(H)ER**.
-
 A CLI tool that detects your mood from free text, autonomously decides what
 kind of music fits it (and your context), matches it against a local song
 catalog, explains its reasoning, and runs an ethics/bias self-check —
