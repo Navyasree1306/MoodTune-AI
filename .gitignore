@@ -1,0 +1,7 @@
+  __pycache__/
+   *.pyc
+   mlops/mlruns/
+   mlops/mlflow.db
+   mlops/prediction_log.csv
+   .pytest_cache/
+   venv/
