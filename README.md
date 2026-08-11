@@ -1,4 +1,5 @@
 # MoodTune AI — Agentic Mood-Based Music Recommender
+> **Production deployment layer available** — see [`mlops/README.md`](mlops/README.md) for MLflow experiment tracking, FastAPI serving, Docker, CI/CD, and drift monitoring built on top of this project.
 
 A CLI tool that detects your mood from free text, autonomously decides what
 kind of music fits it (and your context), matches it against a local song
