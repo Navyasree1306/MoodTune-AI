@@ -1,0 +1,44 @@
+# MLOps Week 3: CI/CD pipeline.
+# Runs automatically on every push - trains the model, runs the test
+# suite against it, and (only if tests pass) confirms the Docker image
+# builds cleanly. This is what "automated" means in MLOps: nothing gets
+# deployed without passing this gate first.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r mlops/requirements-mlops.txt
+
+      - name: Train model
+        run: python mlops/train.py
+
+      - name: Run tests
+        run: python -m pytest mlops/tests/ -v
+
+  docker-build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t moodtune-ai:ci .
